@@ -1,4 +1,5 @@
 from functools import lru_cache
+
 @lru_cache(None)
 def F(n):
     if n < 3:
@@ -9,7 +10,6 @@ def F(n):
         summa = 0
         for i in range(1, n):
             summa += F(i)
-
         return summa
 
 for n in range(0, 39):
