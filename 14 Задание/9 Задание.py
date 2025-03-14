@@ -1,15 +1,17 @@
-maxi = 0
-for x in range(70000, 9, -1):
-    num = 5 ** 2025 + 5 ** 400 - x
+from ipaddress import*
+
+counter_A = 0
+for A in range(0, 256):
+    setka = ip_network(f'207.0.{A}.167/255.255.255.192', False)
 
     k = 0
-    while num > 0:
-        if num % 5 == 4:
-            k += 1
-        num //= 5
+    for ip in setka:
+        dvoich = bin(int(ip)).zfill(32)[2:]
+        left = dvoich[:16]
+        right = dvoich[16:]
 
-    if k == 399:
-        print(x)
-        break
-#     maxi = max(maxi, k)
-# print(maxi)
+        if left.count('0') > right.count('0'):
+            k += 1
+    if k == len(list(setka)):
+        counter_A += 1
+print(counter_A)
