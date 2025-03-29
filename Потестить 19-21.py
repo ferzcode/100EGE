@@ -1,33 +1,19 @@
-from turtle import *
+# #17
+# def f(n, m):
+#     return (abs(n) % 10 == 7) + (abs(m) % 10 == 7)
+#
+# m = [int(x) for x in open('C:/Users/and18/Downloads/Telegram Desktop/Файлы к пробнику Март/17 Задание.txt')]
+# res = []
+# for i in range(len(m) - 1):
+#     if f(m[i], m[i + 1]) == 2:
+#         res.append(abs(m[i] - m[i + 1]))
+# print(len(res), min(res))
 
-tracer(0)
-screensize(10000, 10000)
-
-k = 15
-for i in range(3):
-    forward(7 * k)
-    right(90)
-    forward(12 * k)
-    right(90)
-
-penup()
-forward(4 * k)
-right(90)
-forward(6 * k)
-left(90)
-
-pendown()
-for i in range(4):
-    forward(83 * k)
-    right(90)
-    forward(77 * k)
-    right(90)
-
-penup()
-for x in range(-50 * k, 50 * k, k):
-    for y in range(-50 * k, 50 * k, k):
-        goto(x, y)
-        dot(3, "red")
-
-update()
-done()
+print('x y z w')
+for x in range(2):
+    for y in range(2):
+        for z in range(2):
+            for w in range(2):
+                F = (not(x <= y)) or ((not(w)) <= (not(z))) or w
+                if F == 0:
+                    print(x, y, z, w)
