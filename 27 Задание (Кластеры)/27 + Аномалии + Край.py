@@ -34,7 +34,7 @@ for s in f:
     if -55 < x < -35 and -30 < y < 30:
         kl5.append([x, y])
 
-#
+
 kray1 = Kray(kl1)
 kray2 = Kray(kl2)
 kray3 = Kray(kl3)
