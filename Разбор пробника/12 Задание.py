@@ -19,6 +19,8 @@ for n in range(1, 1000):
             s = s.replace('>2', '1>', 1)
 
     summa = s.count('1') + s.count('2') * 2
+
+    # print(summa, n)
     if prime(summa):
         print(n)
         break

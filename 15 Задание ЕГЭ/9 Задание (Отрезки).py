@@ -9,6 +9,4 @@ for x in [k * 0.25 for k in range(-10000, 10000)]:
 
     f = ((P or A) <= (Q or A))
     if f != 1:
-        otrezok.append(x)
-
-print(ceil(max(otrezok) - min(otrezok)))
+        print(x)
