@@ -1,6 +1,6 @@
 otveti = []
 
-for N in range(1, 1000):
+for N in range(1. 1000):
     binary = bin(N)[2:]
     seredina = len(binary) // 2
 
