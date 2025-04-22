@@ -1,13 +1,9 @@
-from functools import lru_cache
+def f(x, y):
+    if x == y: return 1
+    elif x > y or x == 35: return 0
+    else: return f(x + 1, y) + f(x + 2, y) + f(x * 2, y)
 
-@lru_cache(None)
-def F(n):
-    if n == 1:
-        return 1
-    if n > 1:
-        return n ** 3 + F(n - 1)
+print(f(7, 13) * f(13, 15) * f(15, 51))
 
-for n in range(1, 2026):
-    F(n)
-
-print(F(2025) - F(2022))
+# Если траектория содержит число - учитываем в printe
+# Если траектория НЕ содержит число - учитываем в условии на 0

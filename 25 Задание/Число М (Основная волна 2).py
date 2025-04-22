@@ -4,7 +4,7 @@ def finddel(num):
         if num % delit == 0:
             d.append(delit)
             d.append(num // delit)
-    return d
+    return set(d)
 
 
 c = 0

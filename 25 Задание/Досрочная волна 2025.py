@@ -1,10 +1,10 @@
 def finddel(num):
     d = []
-    for delit in range(2, round(num ** 0.5)):
+    for delit in range(2, round(num ** 0.5) + 1):
         if num % delit == 0 and delit != 7:
             d.append(delit)
             d.append(num // delit)
-    return d
+    return set(d)
 
 
 c = 0

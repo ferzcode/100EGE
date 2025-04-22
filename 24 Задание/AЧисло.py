@@ -7,3 +7,4 @@ reg = rf'[A]{num}(\+{num})'
 
 for c in findall(reg, f):
     print(c)
+
