@@ -5,7 +5,7 @@ for A in range(0, 255):
 
     c = 0
     for ip in setochka:
-        dvoyka = bin(int(ip))[2:]
+        dvoyka = bin(int(ip))[2:].zfill(32)
 
         if dvoyka.count('1') > 15:
             c += 1

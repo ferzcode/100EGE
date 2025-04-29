@@ -5,7 +5,7 @@ for A in range(0, 256):
 
     k = 0
     for ip in setochka:
-        dvoich = bin(int(ip))[2:]
+        dvoich = bin(int(ip))[2:].zfill(32)
 
         levie = dvoich[:16]
         pravie = dvoich[16:]

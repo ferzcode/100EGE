@@ -7,7 +7,7 @@ for znach in A:
 
     k = 0
     for ip in setochka:
-        dvoich = bin(int(ip))[2:]
+        dvoich = bin(int(ip))[2:].zfill(32)
         levie = dvoich[:16] # 0 - 15
         right = dvoich[16:] # 16 - 31
 
