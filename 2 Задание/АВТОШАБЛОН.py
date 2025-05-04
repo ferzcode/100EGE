@@ -2,15 +2,17 @@ from itertools import *
 
 
 def f(x, y, z, w):
-    return (x <= y) and (z == (w <= x)) and (not (w))
+    return (x and ((w <= y) == z))
 
 
-for x1, x2, x3, x4, x5, x6, x7 in product([0, 1], repeat=7):
+for x1, x2, x3, x4, x5 in product([0, 1], repeat=5):
     t = (
-        (0, x1, x2, 0, 1),
-        (1, 0, x3, x4, 1),
-        (x5, 1, x6, x7, 1)
+        # x  y   z  w
+        (x1, x2, 0, 0, 1),
+        (0, x3, x4, 0, 1),
+        (x5, 1, 1, 1, 0)
     )
+
     if len(t) == len(set(t)):
         for p in permutations('xyzw', r=4):
             if all(f(**dict(zip(p, m))) == m[-1] for m in t):
