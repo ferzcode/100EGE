@@ -1,11 +1,8 @@
-def treug(n, m, k):
-    return n + m > k and m + k > n and k + n > m
-
-
-def f(x):
-    return (treug(A, 5, x) <= ((max(x, 11) <= 19) == (not treug(23, 13, x))))
-
-
-for A in range(1, 1000):
-    if all(f(x) == 1 for x in range(1, 1000)):
-        print(A)
+n = 5 * 729 ** 2024 + 3 * 243 ** 1413 - 7 * 81 ** 169 - 2 * 9 ** 107 + 3017
+c = 0
+while n > 0:
+    cifra = n % 27
+    if cifra % 2 == 0 and cifra <= 25:
+        c += cifra
+    n //= 27
+print(c)
