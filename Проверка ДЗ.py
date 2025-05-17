@@ -1,8 +1,19 @@
-n = 5 * 729 ** 2024 + 3 * 243 ** 1413 - 7 * 81 ** 169 - 2 * 9 ** 107 + 3017
-c = 0
-while n > 0:
-    cifra = n % 27
-    if cifra % 2 == 0 and cifra <= 25:
-        c += cifra
-    n //= 27
-print(c)
+# a = [0] * 4000
+#
+# for i in range(0, 6):
+#     a[i] = 1
+#
+# for i in range(6, 2127):
+#     a[i] = i + a[i - 2]
+#
+# print(a[2126] - a[2122])
+
+a = [0] * 21000
+
+for i in range(6):
+    a[i] = i
+
+for i in range(6, 21000):
+    a[i] = (3 * i - 2) * a[i - 5]
+
+print((a[20568] - 51702 * a[20563])//a[20553])

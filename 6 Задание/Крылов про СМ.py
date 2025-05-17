@@ -1,27 +1,25 @@
-from turtle import *
+print(int('AB', 16))
+print(int('500', 8))
+print(int('111110', 2))
 
-tracer(0)
-screensize(10000, 10000)
+m = []
+while True:
+    a = int(input())
+    if a != 0:
+        m.append(a)
+    else:
+        break
+    
+count = 0
+summa = 0
+for i in range(len(m)):
+    if 10 <= m[i] <= 99:
+        summa += m[i]
+        count += 1
 
-k = 30
-for i in range(3):
-    pendown()
-    for j in range(2):
-        forward(10 * k)
-        right(90)
-        forward(10 * k)
-        right(90)
-    penup()
-    forward(5 * k)
-    right(90)
-    forward(5 * k)
-    left(90)
+if count == 0:
+    print("NO")
+else:
+    print(round(summa / count))
 
-penup()
-for x in range(-20 * k, 20 * k, k):
-    for y in range(-20 * k, 20 * k, k):
-        goto(x, y)
-        dot(3, "red")
-
-update()
-done()
+    
